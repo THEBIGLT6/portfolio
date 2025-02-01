@@ -1,0 +1,139 @@
+.pageContainer {
+    width: 100%;
+    display: flex;
+    height: calc(100vh - 60px);
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.projectsContainer{
+
+    width: 80%;
+    height:inherit;
+
+}
+
+.projectHeader{
+    color:#69BF41;
+    margin-bottom: 0;
+}
+
+.projectPreface{
+    display: flex;
+    margin-top: 10px;
+    color: #DDDDDD;
+    width:60%;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Project Card */
+
+.cardGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    padding: 20px;
+}
+  
+.card {
+    background-size: cover; 
+    background-position: center; 
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    
+}
+
+.cardContainer{
+
+    margin-top: 180px;
+    background: rgba(200, 200, 200, 0.7); 
+    
+}
+  
+.card:hover {
+    transform: scale(1.05);
+}
+  
+.cardTitle {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    color:black;
+}
+  
+.cardDescription {
+    font-size: 14px;
+    padding: 10px;
+    text-align: center;
+    color: black;
+}
+
+.tag-images {
+    display: flex;
+    gap: 10px; 
+    justify-content: center; 
+    margin-top: 5px;
+  }
+  
+  .tag-icon {
+    width: 20px; 
+    height: 20px;
+    object-fit: contain; 
+  }
+
+/* Project Popup */
+
+.popupTags {
+    margin-top: 10px;
+  }
+  
+.popupTag {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+.videoContainer {
+    margin: 20px 0;
+    text-align: center;
+}
+
+video {
+    max-width: 100%; 
+    max-height: 300px;
+    border-radius: 8px;
+    object-fit: cover; 
+}
+
+.downloadSection {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.downloadLink {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.downloadLink:hover {
+    text-decoration: underline;
+}
+
+.projectDescription {
+    margin: 20px 0;
+    font-size: 16px;
+    color: #333;
+    text-align: justify;
+}
