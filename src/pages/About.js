@@ -25,7 +25,6 @@ import music from "../resources/icons/music.png";
 import raspberryPi from "../resources/icons/raspberryPi.png";
 import trivia from "../resources/icons/trivia.png";
 
-import { Textfit } from 'react-textfit';
 import React, { useState } from "react";
 
 //Skill descriptions
@@ -181,11 +180,9 @@ export default function About(){
                </div>
 
                <div className="underPic">
-                    
-                    <Textfit mode="single" forceSingleModeWidth={false}>
-                       <p>London, ON | Cambridge, ON</p>
-                    </Textfit>
 
+                    <p>London, ON | Cambridge, ON</p>
+                    
                     <div className="linkButtons">    
                         <a href="https://github.com/THEBIGLT6" target="_blank" rel="noopener noreferrer">
                             <button className="linkButt"> 
