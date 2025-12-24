@@ -156,7 +156,7 @@ export default function About(){
                
                <div className="resumeLink">
 
-                   <a href="/resources/resume.pdf" download="LiamT-Resume.pdf"  >
+                   <a href={`${process.env.PUBLIC_URL}/resources/resume.pdf`} download="LiamT-Resume.pdf"  >
                       Click here for a PDF of my resume
                    </a>
 

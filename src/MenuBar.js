@@ -1,4 +1,4 @@
-import { Link, resolvePath, useMatch, useResolvedPath } from "react-router-dom"
+import { Link, resolvePath, useMatch, useResolvedPath, useLocation } from "react-router-dom"
 import "./resources/css/MenuBar.css"
 
 export default function MenuBar(){
@@ -14,8 +14,11 @@ export default function MenuBar(){
 
 function CustomLink({to, text, ...props}){
 
-    const resolvedPath = useResolvedPath(to)
-    const isCurrent = useMatch({path:resolvedPath.pathname, end:true })
+    const { pathname } = useLocation();
+    const resolvedPath = useResolvedPath(to);
+
+    const isPortfolio = pathname === "/portfolio" || pathname === "/portfolio/";
+    const isCurrent = useMatch({ path: resolvedPath.pathname, end: true }) || (isPortfolio && to === "/");
 
     return(
         <li className={isCurrent ? "active" : "" }>

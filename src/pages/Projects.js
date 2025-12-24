@@ -71,7 +71,7 @@ function CardGrid() {
     return (
       <div className="cardGrid">
         {cardData.map((card, index) => (
-          <div className="card" style={{ backgroundImage: `url(${card.image})` }} key={index} onClick={() => handleCardClick(card)}>
+          <div className="card" style={{ backgroundImage: `url(${process.env.PUBLIC_URL + card.image})` }} key={index} onClick={() => handleCardClick(card)}>
 
             <div className="cardContainer">
                 <div className="cardTitle">{card.title}</div>
@@ -103,7 +103,7 @@ function ProjectPopup({ title, tags, video, description, useLink, link, sourceCo
     videoElement= (
         <div className="videoContainer">
             <video controls>
-                <source src={video} type="video/mp4" />
+                <source src={`${process.env.PUBLIC_URL}${video}`} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
         </div>
@@ -135,7 +135,7 @@ function ProjectPopup({ title, tags, video, description, useLink, link, sourceCo
   {
     sourceCodeElement =(
       <div className="downloadSection">
-        <a href={sourceCode} download className="download-link">Download Source Code</a>
+        <a href={`${process.env.PUBLIC_URL + sourceCode}`} download className="download-link">Download Source Code</a>
       </div>
     );
   }
