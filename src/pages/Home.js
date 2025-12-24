@@ -2,6 +2,7 @@ import "../resources/css/Home.css"
 import GitHub from "../resources/icons/GitHub.png";
 import LinkedIn from "../resources/icons/LinkedIn.png";
 import Email from "../resources/icons/Email.png";
+import BodyPic from "../resources/Pictures/fullbody.png";
 
 import React, { useEffect } from 'react';
 
@@ -80,7 +81,7 @@ export default function Home(){
           <div className="PictureComp">
 
             <div className="PicContainer">
-            
+              <img src={BodyPic} alt="Pic of Liam" className="bodyPic" />
             </div>
 
           </div>{/*PictureComp */}

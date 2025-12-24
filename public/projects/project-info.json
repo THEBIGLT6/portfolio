@@ -1,66 +1,121 @@
 [
     {
+        "title": "2D Platformer Game",
+        "date": "2025-11",
+        "brief": "A Basic 2D Platformer game created in C# using the Unity engine. The game features basic game mechainics such as enemies, multiple menus, collectibles and music / SoundFX.",
+        "description": "One of my first Unity projects, 'Dragon Warrior Cave Adventure' is a simple 2D platformer where the objective is to navigate through a cave while avoiding enemies and reaching the treasure endpoint. The game features enemies that patrol and some that will attack the player when they enter the area, two unique attacks, a health system and a consistent leaderboard that saves players scores. Downloading the 'source code' will give you a copy of the built game that can be run on Windows, there is a README containing information about controls. This project helped me to learn the basics of Unity, C# scripting and game design principles.",
+        "image":"/projects/2DPlatformer/background.png",
+        "useLink": false,
+        "link":"",
+        "sourceCode":"/projects/2DPlatformer/2DPlatformerBuild.zip",
+        "video":"/projects/2DPlatformer/demo.mp4",
+        "tags":["C#" ,"Unity"]
+    },
+    {
+        "title": "Rock 'N' Roll Star - Unity Game",
+        "date": "2025-12",
+        "brief": "A 3D 'beat 'em up' Unity game. The objective of the game is to rack up as much score as possible while collecting the neccesary missing records from the suits.",
+        "description": "Building upon the 2D platformer game, 'Rock 'N' Roll Star' is a 3D beat 'em up where the player must search for vinyl records guarded by 'The Suits', the game features a soundtrack of some of my favourite bands. This game introduced me into a few new concepts in Unity like 3D movement / rendering / colliders, enemy AI (nav mesh agents) and a more complex gameplay system. The game features a system that rewards consecutive or combo hits, a scoring system, enemies with ground 'n' pound and shooting attacks, and more. There is also a settings menu where the user can edit the language, french and english are supported for now, other settings include volume and mouse sensitivity. A game demo is currently unavaible, but feel free to check out the game on my GitHub!.",
+        "image":"/projects/RockNRollStar/background.png",
+        "useLink": true,
+        "link":"https://github.com/THEBIGLT6/RockNRollStar",
+        "sourceCode":"",
+        "video":"/projects/RockNRollStar/demo.mp4",
+        "tags":["C#" ,"Unity"]
+    },
+    {
+        "title": "Dialogue System & Language Editor",
+        "date": "2025-12",
+        "brief": "A more tools centered Unity project that implements a few tools to assist the user to make applications that have full dialogue systems over multiple languages. A demonstraion dialouge and languages are given.", 
+        "description": "This system showcases two Unity tools that I've created to help build dialogue systems within games. The first is a language editor, a window that allows a user to create 'keys', these keys could be dialogue lines in a given language ex. key 'greeting' could be 'Hello' in English and 'Bonjour' in French. It then allows the user to create a language that fills each of these key values. The second tool is a dialogue tree editor using XNode an open source Unity library. There are a few node types, one for a descion dialogue, one for a basic dialouge and a lead node. These can then be used to create dialouge trees that move between nodes based on player descions. There is more in depth instructions on how to create these trees in the README of the source code zip. An example scene is featured using the iconic Obi-Wan vs Anakin scene from Revenge of the Sith in English and French.",
+        "image":"/projects/DialogueTreeEditor/background.png",
+        "useLink": false,
+        "link":"",
+        "sourceCode":"/projects/DialogueTreeEditor/DialogueTreeEditor.zip",
+        "video":"/projects/DialogueTreeEditor/demo.mp4",
+        "tags":["C#" ,"Unity"]
+    },
+    {
+        "title": "Networking Snake Game",
+        "date": "2023-12",
+        "brief": "A upgrade of the classic 'Snake' game. A local game server is hosted allowing clients to connect and play a multiplayer snake game, complete with a text chat and text shortcuts.",
+        "description": "Completed as an assignment in my 3rd year networking course, the actual snake game was given to us. The development challenge was to implement a networked version of the classic game, where players could connect to a local server and play together in real-time. The server was built using Python's socket library, handling multiple client connections, game states, text chats, all of which are encrypted using basic RSA encryption for security. To play the game, first run the server script to start the game server. Then, run the client script on each player. Players can control their snakes using the arrow keys (or WASD), 'q' to quit, 'r' to restart and use text shortcuts with 'z', 'x' and 'c'. Typing messages in the terminal will also send messages to other players. This project provided valuable experience in network programming, real-time data synchronization, and basic encryption techniques.",
+        "image":"/projects/SnakeGame/background.png",
+        "useLink": false,
+        "link":"",
+        "sourceCode":"/projects/SnakeGame/SnakeGame.zip",
+        "video":"/projects/SnakeGame/demo.mp4",
+        "tags":["Python"]
+    },
+    {
+        "title": "OpenGl - Waves",
+        "date": "2024-04",
+        "brief": "A C++ OpenGl project that takes a plane mesh as input and through a process of adding geometry, fragment, tesselation and vertex shaders simulates waves flowing.",
+        "description": "This was the 6th and final assignment in my computer graphics course. This assignment focused more on the shaders than anything else, using tessalation on a plane quad mesh to then manipulate it with a geometry shader to create waves, a historically challenging problem in computer graphics. The first shader used is a vertex shader which calculates values like eye and light direction, vertices in world coordinates and UV coordinates. Tesselation control and evaluation shaders split the quad meshes into finer quads and then passes in interpolated values into the geometetry shader. The geometry shader uses the formula for Gerstner waves to add depth ( using a displacement map ) to the fine meshes, combining waves that will collide over time. The final step is in the fragment shader where ambient, specular and diffuse lighting components that have been edited over the shader program are applied to the mesh, giving it a lighting effect. Textures are also added to the waves to simulate the look of the water moving while the waves flow. This was by far the most challenging assignment in the course but helped me to learn a lot about different shaders and how they are used in rendering graphics. Similar to the TriangleMesh assignment, spherical coordinates are used to look around the waves.",
+        "image":"/projects/Waves/background.png",
+        "useLink": false,
+        "link":"",
+        "sourceCode":"/projects/Waves/OpenGL-Waves.zip",
+        "video":"/projects/Waves/demo.mp4",
+        "tags":["C++", "OpenGL"]
+    },
+    {
+        "title": "Western Maps",
+        "date": "2023-04",
+        "brief": "A mapping system of select buildings at Western University. Points of Interest (POIs) are highlighted on the map, are user creatable, can be favourited and search for. Other features include: displaying the current weather and maintaining consistent data.",
+        "description": "Worked on as group project with four others, Western Maps was one of the first larger projects I was able to work on. It features a number of Western University buildings mapped out using Java Swing, with POI's such as washrooms and elevators marked out. POI's can be favourited by the user and data is then saved to a local file, as well as created and added to the map. A search function is also implemented that will find POI's based on user input. The current weather in London, ON is also displayed using a weather API. Some of my main responsibilites were to implement all of the POIs appearing on top of the map and stay consistent to the building/floor, being able to select / unselect layers, user created POIs as well as other GUI work and unit tests. As one of my first full fledged projects, I was able to learn a lot about Java Swing, working in a team environment and project management.",
+        "image":"/projects/WesternMaps/background.png",
+        "useLink": false,
+        "link":"",
+        "sourceCode":"/projects/BezierCurve/WesternGIS.zip",
+        "video":"/projects/WesternMaps/demo.mp4",
+        "tags":["Java"]
+    },
+    {
+        "title": "LiamTrussDotCom",
+        "brief": "A portfolio project created to act as a resume and display other projects that I have created.",
+        "description": "This project was created as a way to showcase my resume and projects as a software developer. It is built using ReactJS for the frontend and hosted using GitHub Pages. Web page design and UI/UX wouldn't typically be my strong suit, however I was able to learn a lot about creating a visually appealing and easy to navigate website through this project. I continue to update the about and projects sections as I complete more projects and gain more experience in the field, as well as slight upgrades to the overall website. ",
+        "image":"/projects/LiamTrussDotCom/background.png",
+        "useLink": true,
+        "link":"https://github.com/THEBIGLT6/portfolio",
+        "sourceCode":"",
+        "video":"",
+        "tags":["JavaScript", "React", "HTML"]
+    },
+    {
+        "title": "OpenGl - TriangleMesh",
+        "date": "2024-03",
+        "brief": "A C++ OpenGl project that uses the marching cubes algorithm to display a 3D mathamatical function, complete with lighting shaders and the ability to manipulate the view arounda spherical point.",
+        "description": "This was my 5th assignment in my 3rd year computer graphics course. The goal of the assignment was as follows, use the marching cubes algorithm on an aribtrary scalar field, mimick lighting with a shader, have the view matrix rotate around an origin and write triangle mesh data to a file. The Marching Cubes algorithm creates a 3D surface from volumetric data by breaking the space into cubes and checking which parts of each cube are inside or outside a threshold. It finds where the surface cuts through each cube's edges, uses a pre-made table to decide how to connect those points into triangles, and then combines all the triangles into a smooth 3D shape. The algorithm is widely used in medical imaging to create 3D models of organs or bones from CT and MRI scan data, helping doctors visualize internal structures. The spherical cooridnates system was used to implement the rotating camera, focusued around an origin at the centre of the function drawing. The shaders work together to implement a Phong-like lighting: the vertex shader calculates transformed positions, normals, and light direction for each vertex, while the fragment shader computes ambient, diffuse, and specular lighting to create realistic shading on the object's surface. There are 2 default functions implemented into the program that can be used: f1 ( y - sin(x)cos(z) ) and f2 (x^2 - y^2 - z^2 - z) which is shown in the demo. Other variables that can be manipulated by the user are min and max ( minimum and maximum values, boudries for the surronding cube), stepsize ( side length of each marching cube ), isovalue ( if a value of a point is greater than isovalue it is considered to be inside the cube, less than and it is outside of the cube ) light ( direction of the incoming light source ) and colour ( colour of the function ). ",
+        "image":"/projects/TriangleMesh/background.png",
+        "useLink": false,
+        "link":"",
+        "sourceCode":"/projects/TriangleMesh/OpenGL-TriangleMesh.zip",
+        "video":"/projects/TriangleMesh/demo.mp4",
+        "tags":["C++", "OpenGL"]
+    },
+    {
         "title": "OpenGl - Bezier Curve",
+        "date": "2024-02",
         "brief": "A limited pen tool that allows the user to add points on a Bezier spline and manipulate them with control points. Created using OpenGl for Python.",
         "description": "This project was the third assignment in my 3rd year computer graphics course. The goal of the assignment was to build this spline tool that connects all points with a Bezier Curve - a line with 2 end points that can be manipulated by 2 intermediate control points made up of 200 connected line segments to simulate the curve. Staring with an empty screen, a mouse click will add an endpoint to the screen, connecting it to the nearest unconnected endpoint. Once 2 endpoints are connected control points will appear that can be used to manipulate the curve. Endpoints and control points can be clicked and moved with the mouse, pressing 'E' will erase the screen. At a higher level Bezier Curves can be used to simulate smooth lines whether it be for mapping character animations in gaming, computer graphics or developing CAD software. ",
         "image":"/projects/BezierCurve/background.png",
+        "useLink": false,
+        "link":"",
         "sourceCode":"/projects/BezierCurve/Truss-BezierCurve.zip",
         "video":"/projects/BezierCurve/demo.mp4",
         "tags":["Python", "OpenGL"]
     },
     {
         "title": "OpenGl - Zelda Room",
+        "date": "2024-03",
         "brief": "An OpenGl C++ project that renders a room from The Legend of Zelda using triangular mesh data read from a file. This program allows the user to roam freely around the room.",
         "description": "This project was the forth assignment in my 3rd year graphics course and one of my first C++ programs. The goal for the assignment was to create an OpenGl program that reads points and faces from multiple .ply files (that were provided) that were then turned into a VAO (Vertex Array Object) that could be used by OpenGl to render the meshes. There were also provided .bmp files that matched with each triangular mesh object, these .bmps were used to add texture to the meshes, giving them their color and design along with fragment and vertex shaders. As we were learning about different camera types at this point in the course, we were also required to implement a first person POV camera that can be freely moved around the generated meshes. GLFW was used to handle this, the up and down arrow keys move the camera position forwards/backwards while the left/right keys will rotate the camera around a centre axis.",
         "image":"/projects/GraphicsRoom/background.png",
-        "sourceCode":"/projects/BezierCurve/Truss-BezierCurve.zip",
+        "useLink": false,
+        "link":"",
+        "sourceCode":"/projects/GraphicsRoom/OpenGL-ZeldaRoom.zip",
         "video":"/projects/GraphicsRoom/demo.mp4",
         "tags":["C++", "OpenGL"]
-    },
-    {
-        "title": "LiamTrussDotCom",
-        "brief": "A portfolio project created to act as a resume and display other projects that I have created.",
-        "description": "This is a longer, more detailed description of Card 1 that explains its content and purpose.",
-        "image":"/projects/LiamTrussDotCom/background.png",
-        "sourceCode":"",
-        "video":"",
-        "tags":["JavaScript", "React", "HTML"]
-    },
-    {
-        "title": "Networking Snake Game",
-        "brief": "A upgrade of the classic 'Snake' game. A local game server is hosted allowing clients to connect and play a multiplayer snake game, complete with a text chat and text shortcuts.",
-        "description": "This is a longer, more detailed description of Card 1 that explains its content and purpose.",
-        "image":"/projects/SnakeGame/background.png",
-        "sourceCode":"/projects/SnakeGame/Truss-BezierCurve.zip",
-        "video":"/projects/SnakeGame/demo.mp4",
-        "tags":["Python"]
-    },
-    {
-        "title": "OpenGl - TriangleMesh",
-        "brief": "A C++ OpenGl project that uses the marching cubes algorithm to display a 3D mathamatical function, complete with lighting shaders and the ability to manipulate the view arounda spherical point.",
-        "description": "This was my 5th assignment in my 3rd year computer graphics course. The goal of the assignment was as follows, use the marching cubes algorithm on an aribtrary scalar field, mimick lighting with a shader, have the view matrix rotate around an origin and write triangle mesh data to a file. The Marching Cubes algorithm creates a 3D surface from volumetric data by breaking the space into cubes and checking which parts of each cube are inside or outside a threshold. It finds where the surface cuts through each cube's edges, uses a pre-made table to decide how to connect those points into triangles, and then combines all the triangles into a smooth 3D shape. The algorithm is widely used in medical imaging to create 3D models of organs or bones from CT and MRI scan data, helping doctors visualize internal structures. The spherical cooridnates system was used to implement the rotating camera, focusued around an origin at the centre of the function drawing. The shaders work together to implement a Phong-like lighting: the vertex shader calculates transformed positions, normals, and light direction for each vertex, while the fragment shader computes ambient, diffuse, and specular lighting to create realistic shading on the object's surface. There are 2 default functions implemented into the program that can be used: f1 ( y - sin(x)cos(z) ) and f2 (x^2 - y^2 - z^2 - z) which is shown in the demo. Other variables that can be manipulated by the user are min and max ( minimum and maximum values, boudries for the surronding cube), stepsize ( side length of each marching cube ), isovalue ( if a value of a point is greater than isovalue it is considered to be inside the cube, less than and it is outside of the cube ) light ( direction of the incoming light source ) and colour ( colour of the function ). ",
-        "image":"/projects/TriangleMesh/background.png",
-        "sourceCode":"/projects/BezierCurve/Truss-BezierCurve.zip",
-        "video":"/projects/TriangleMesh/demo.mp4",
-        "tags":["C++", "OpenGL"]
-    },
-    {
-        "title": "OpenGl - Waves",
-        "brief": "A C++ OpenGl project that takes a plane mesh as input and through a process of adding geometry, fragment, tesselation and vertex shaders simulates waves flowing.",
-        "description": "This was the 6th and final assignment in my computer graphics course. This assignment focused more on the shaders than anything else, using tessalation on a plane quad mesh to then manipulate it with a geometry shader to create waves, a historically challenging problem in computer graphics. The first shader used is a vertex shader which calculates values like eye and light direction, vertices in world coordinates and UV coordinates. Tesselation control and evaluation shaders split the quad meshes into finer quads and then passes in interpolated values into the geometetry shader. The geometry shader uses the formula for Gerstner waves to add depth ( using a displacement map ) to the fine meshes, combining waves that will collide over time. The final step is in the fragment shader where ambient, specular and diffuse lighting components that have been edited over the shader program are applied to the mesh, giving it a lighting effect. Textures are also added to the waves to simulate the look of the water moving while the waves flow. This was by far the most challenging assignment in the course but helped me to learn a lot about different shaders and how they are used in rendering graphics. Similar to the TriangleMesh assignment, spherical coordinates are used to look around the waves.",
-        "image":"/projects/Waves/background.png",
-        "sourceCode":"/projects/BezierCurve/Truss-BezierCurve.zip",
-        "video":"/projects/Waves/demo.mp4",
-        "tags":["C++", "OpenGL"]
-    },
-    {
-        "title": "Western Maps",
-        "brief": "A mapping system of select buildings at Western University. Points of Interest (POIs) are highlighted on the map, are user creatable, can be favourited and search for. Other features include: displaying the current weather and maintaining consistent data.",
-        "description": "This is a longer, more detailed description of Card 1 that explains its content and purpose.",
-        "image":"/projects/WesternMaps/background.png",
-        "sourceCode":"/projects/BezierCurve/Truss-BezierCurve.zip",
-        "video":"/projects/WesternMaps/demo.mp4",
-        "tags":["Java"]
-    }
-
+    }    
 ]

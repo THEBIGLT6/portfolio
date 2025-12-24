@@ -1,5 +1,5 @@
 import "../resources/css/About.css"
-import headshot from '../resources/icons/headshot.PNG';
+import headshot from '../resources/Pictures/headshot.png';
 import GitHub from "../resources/icons/GitHub.png";
 import LinkedIn from "../resources/icons/LinkedIn.png";
 import Email from "../resources/icons/Email.png";
@@ -13,6 +13,7 @@ import FFmpeg from "../resources/icons/FFmpeg.png";
 import Linux from "../resources/icons/linux.png";
 import ReactPic from "../resources/icons/react.png";
 import Svn from  "../resources/icons/svn.png"
+import Unity from "../resources/icons/unity.png";
 
 import AI from '../resources/icons/AI.png';
 import basketball from "../resources/icons/basketball.png";
@@ -38,6 +39,8 @@ const linuxDescription = "An open-source Unix-like operating system that is deve
 const svnDescription = "SVN is a version control system used to manage files and directories for software developers. ";
 const qtDescription = "A cross-platform, open-source framework used for developing graphical user interfaces and applications. ";
 const reactDescription = "A Javascript library developed by Meta for building fast user interfaces. React is mainly used to create webpages and single page applications using JSX which helps developers write HTML-like webpages.";
+const UnityDescription = "A powerful cross-platform game engine used to create 2D, 3D and VR games. Unity uses C# as it's main programming language and has a large asset store for developers to use.";
+
 
 // Bullet Point lists for skills 
 const cppBullet = ["Experience writing effective C++ code using good O.O.P. principles in an organized manner", 
@@ -45,12 +48,12 @@ const cppBullet = ["Experience writing effective C++ code using good O.O.P. prin
                    "Developed applications in C++ with practical applications while working at IO Industries"];
 const javaBullet = ["Comfortable developing and building Java applications", 
                     "Used Java to build a mapping system of Western University application that incorporated Java libraries such as JSON, Java Swing and JUnit", 
-                    "Developed custom data structures for a Data Structures and Algorithmns course", 
-                    "Caluclated time complexity and optimized programs in Java for an Analysis of Algorithmns course"];
-const pythonBullet = ["Used Python for writing scripts to automate tasks / maintain code", 
+                    "Utilized Java to build computer networking tools such as a WebScraper and different alogorithmns involving peer-to-peer connections.",
+                    "Developed custom data structures for a Data Structures and Algorithmns course"];
+const pythonBullet = ["Utilized Python for writing scripts to automate tasks / maintain code", 
                       "Built multiple applications using the socket library to create chatrooms and client/server based games over TCP and UDP connection protocols for a Computer Networks course",
-                      "Libraries I'm experienced in include: 'OS', 'sys', 'Numpy', 'Pygame', 'threading', 'rsa' (encryption) and 'socket'", 
-                      "Used OpenGl to build graphical applications and games"];
+                      "Libraries I'm experienced in include: 'scikit-learn', 'pyTorch', 'Numpy', 'Pygame', 'threading', 'rsa' (encryption) and 'socket'", 
+                      "Utilized Python to build machine learning models and projects"];
 const cBullet = ["Comfortable writing and debugging code written in C", 
                  "Developed low-level C programs using system functions for an Operating Systems course"];
 const ffmpegBullet = ["Used the Avcodec libraries to build an applicaton for creating MP4 video from image files.", 
@@ -70,6 +73,10 @@ const qtBullet = ["Familar with developing Qt applications in Linux and Windows"
                   "Compiled/built Qt libraries from source" ];
 const reactBullet = ["Used React/JSX to build a redesigned and user-experience oriented Github for a Human-Computer interation course", 
                      "React was used to build this portfolio website!"];
+const UnityBullet = ["Experience building 2D, 3D and VR games in C# using the Unity engine",
+                     "Designed and developed custom Unity editor tools to streamline content creation and reduce manual setup",
+                     "Built real-time combat mechanics, including abilities, cooldowns, and enemy interactions",
+                     "Created responsive in-game UI using Unity UI (Canvas, TextMeshPro, event systems)"];
 
 // Popup dialog on SkillButton being clicked
 function Popup({ title, description, bulletList, onClose }) {
@@ -162,7 +169,16 @@ export default function About(){
 
                <div className="brief">
                   <h2 className="aboutH2">// About Me</h2>
-            </div>
+                  <p className="aboutDescription">
+                    I’m currently finishing my final semester of Computer Science at Western and will be seeking full-time opportunities starting Spring 2026. I’ve been interested in software development since high school, drawn to the problem-solving and creativity that come with building reliable, well-designed systems. \n
+                  </p>
+                  <p className="aboutDescription">
+                    I’ve always been a gamer, which led me to pursue a minor in Game Development. Through this, I’ve gained hands-on experience with the full game development process and had the opportunity to work on several of my own projects. Alongside this, my internship experience at camera manufacturer IOI helped me discover an interest in low-level programming and working close to hardware. \n
+                  </p>
+                  <p className="aboutDescription">
+                    Outside of tech, I enjoy playing and watching basketball (go Celtics!) and football (go Patriots!), and spending time with a guitar, playing along to bands like Oasis, Radiohead, and Nirvana. Feel free to check out my work or use the links to the left to connect!
+                  </p>
+               </div>
 
                <div className="underPic">
                     
@@ -200,12 +216,13 @@ export default function About(){
                   <SkillButton img={Java} title="Java" bulletList={javaBullet} description={javaDescription}/>
                   <SkillButton img={Python} title="Python" bulletList={pythonBullet} description={pythonDescription}/>
                   <SkillButton img={Qt} title="Qt" bulletList={qtBullet} description={qtDescription}/>
-                  <SkillButton img={Boost} title="Boost Libraries" bulletList={boostBullet} description={boostDescription}/>
-                  <SkillButton img={C} title="C" bulletList={cBullet} description={cDescription}/>
-                  <SkillButton img={FFmpeg} title="FFmpeg" bulletList={ffmpegBullet} description={ffmpegDescription}/>
                   <SkillButton img={Linux} title="Linux" bulletList={linuxBullet} description={linuxDescription}/>
+                  <SkillButton img={Unity} title="Unity" bulletList={UnityBullet} description={UnityDescription}/>
+                  <SkillButton img={C} title="C" bulletList={cBullet} description={cDescription}/>
                   <SkillButton img={ReactPic} title="React" bulletList={reactBullet} description={reactDescription}/>
                   <SkillButton img={Svn} title="Svn/Git" bulletList={svnBullet} description={svnDescription}/>
+                  <SkillButton img={Boost} title="Boost Libraries" bulletList={boostBullet} description={boostDescription}/>
+                  <SkillButton img={FFmpeg} title="FFmpeg" bulletList={ffmpegBullet} description={ffmpegDescription}/>
 
                   <h2 className="aboutH2">// Soft Skills</h2>
                   <SoftSkillLabel skill={"Problem Solving"} percentage={100}/>
@@ -221,7 +238,6 @@ export default function About(){
                     <div className="interestsWrapper">
                         <InterestLabel label="Gaming" img={gaming}/>
                         <InterestLabel label="Artifical Intelligence" img={AI}/>
-                        <InterestLabel label="Raspberry Pi Projects" img={raspberryPi}/>
                         <InterestLabel label="Computer Vision" img={compVision}/>
                         <InterestLabel label="Game Development" img={gameDev}/>
                         <InterestLabel label="Full Stack Development" img={fullStack}/>
@@ -245,7 +261,7 @@ export default function About(){
                       <li>2022-2023 & 2023-2024 Dean's Honour List</li>
                       <li>Science Internship program - 16 month work term</li>
                       <li>Minor in game development</li>
-                      <li>Classes taken include: Data Structures and Algorithmns, Computer Networks, Operating Systems, Object Oriented Design, AI, Computer Graphics, Computer Architecture and more.  </li>
+                      <li>Relevant courses: Computer Networks, Game Programming and Design, System Programming, Object-Oriented Design and Analysis, Internet Algorithmics, Machine Learning / AI and more.  </li>
                     </ul>
 
                    <h2 className="aboutH2">// Work Experience</h2>
@@ -255,7 +271,12 @@ export default function About(){
                    &nbsp;&nbsp;&nbsp;&nbsp; May 2024 to August 2025
                    </h3>
                    <ul className="bulletPoints">
-                      <li>Completed a 16-month internship program in collaboration with Western University</li>
+                        <li>Completed a 16 month work term as part of the Western Science Internship Program</li>
+                        <li>Designed and developed cross-platform desktop applications (Windows/Linux) in C++ to interface with high-speed video recording hardware</li>
+                        <li>Developed independent projects, including a custom transcoding library for converting sequences of raw image data to MP4 video and a lightweight RTSP video viewer</li>
+                        <li>Leveraged industry-standard libraries including Qt, Boost, Intel IPP, OpenCV, and FFmpeg to implement performant solutions</li>
+                        <li>Debugged and optimized code to maintain high standards of quality, efficiency, and adherence to company coding guidelines</li>
+                        <li>Reproduced and resolved customer-reported issues, ensuring timely bug fixes and reliable software performance</li>
                     </ul>
 
                    <h3 className="aboutH3">
@@ -263,24 +284,27 @@ export default function About(){
                    &nbsp;&nbsp;&nbsp;&nbsp; May 2023 to August 2024
                    </h3>
                    <ul className="bulletPoints">
-                      <li>Packaging and producing high levels of cardboard and paper products</li>
-                      <li>Preparing machine for incoming orders and altering mechanisms as necessary</li>
-                      <li>Quality assurance for all product being produced</li>
-                      <li>Factory safety and WHMIS training</li>
+                      <li>Packaged high levels of cardboard and paper products</li>     
+                      <li>Prepared machinery for incoming orders and altering mechanisms as necessary</li>
+                      <li>Performed quality checks to ensure all finished products met company and customer standards</li>
+                      <li>Completed factory safety and WHMIS training, maintaining a safe work environment</li>
                     </ul>
 
                    <h3 className="aboutH3">
                    <u>African Lion Safari (KoHo Food Service) - Shift Supervisor</u> <br />
-                   &nbsp;&nbsp;&nbsp;&nbsp; April 2023 to September 2023
+                   &nbsp;&nbsp;&nbsp;&nbsp; April 2022 to September 2022 (Sesonal)
                    </h3>
                    <ul className="bulletPoints">
-                      <li>Supervising approximately 50 employees in a day, ensuring employees are completing responsibilities and working well with one another </li>
-                      <li>Ensuring all employees are trained and using kitchen equipment according to health and safety procedures</li>
-                      <li>Taking daily and weekly inventory counts along with keeping track of deliveries received</li>
-                      <li>Checking all opening and closing procedures are followed at each restaurant location</li>
-                      <li>Closing the restaurant for the night, ensuring all doors are locked and equipment off</li>
-                      <li>Handing out and keeping track of all cash boxes for the day</li>
-                      <li>Managing and responding to customer complaints</li>
+                        <li>Promoted to Supervisor after progressing from Team Member to Crew Chief over several years, demonstrating strong performance, leadership, and reliability</li>
+                        <li>Supervising approximately 50 employees in a day, ensuring employees are completing responsibilities and working well with one another</li>
+                        <li>Ensuring all employees are trained and using kitchen equipment according to health and safety procedures</li>
+                        <li>Taking daily/ weekly inventory counts along with keeping track of deliveries received</li>
+                        <li>Checking all opening and closing procedures are followed at each restaurant location</li>
+                        <li>Closing the restaurant for the night, ensuring all doors are locked and equipment off</li>
+                        <li>Handing out and keeping track of all cash boxes for the day</li>
+                        <li>Managing and responding to customer complaints</li>
+                        <li>Led and coordinated team members in a fast-paced kitchen environment to efficiently prepare and complete customer orders</li>
+                        <li>Obtained City of Hamilton Food Safety and Ontario Smart Serve certificates</li>
                     </ul>
 
                    

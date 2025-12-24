@@ -213,13 +213,16 @@ body, html {
     width: 50%;
 }
 
-.PicContainer {
+.PictureComp {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 30%;
+  height: calc(100vh - 40px);    
+  overflow: hidden;        
+}
 
-    position: absolute;
-    background-color: red;
-    width:30%;
-    height:85%;
-    bottom: 0;
-    
-    
+.bodyPic {
+  width: 125%;
+  height: auto;
 }
