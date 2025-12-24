@@ -51,7 +51,7 @@ function CardGrid() {
   // Read project info from the JSON file 
   useEffect(() => {
       // Load JSON data dynamically
-      fetch("/projects/project-info.json")
+      fetch(`${process.env.PUBLIC_URL}/projects/project-info.json`)
           .then((response) => response.json())
           .then((data) => setCardData(data))
           .catch((error) => console.error("Error loading JSON data:", error));
