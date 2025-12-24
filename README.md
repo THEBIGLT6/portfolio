@@ -2,7 +2,7 @@
 This project is a React / JSX portfolio app I created to showcase my resume and some other projects I have worked on.
 
 ## Live Demo
-Deployed using GitHub pages at ... *link*
+Deployed using GitHub pages [Here](https://THEBIGLT6.github.io/portfolio/)
 
 ## Last Updated 
 12-24-2025
