@@ -166,19 +166,6 @@ export default function About(){
                   <img src={headshot} alt="Faded" />
                </div>
 
-               <div className="brief">
-                  <h2 className="aboutH2">// About Me</h2>
-                  <p className="aboutDescription">
-                    I’m currently finishing my final semester of Computer Science at Western and will be seeking full-time opportunities starting Spring 2026. I’ve been interested in software development since high school, drawn to the problem-solving and creativity that come with building reliable, well-designed systems. \n
-                  </p>
-                  <p className="aboutDescription">
-                    I’ve always been a gamer, which led me to pursue a minor in Game Development. Through this, I’ve gained hands-on experience with the full game development process and had the opportunity to work on several of my own projects. Alongside this, my internship experience at camera manufacturer IOI helped me discover an interest in low-level programming and working close to hardware. \n
-                  </p>
-                  <p className="aboutDescription">
-                    Outside of tech, I enjoy playing and watching basketball (go Celtics!) and football (go Patriots!), and spending time with a guitar, playing along to bands like Oasis, Radiohead, and Nirvana. Feel free to check out my work or use the links to the left to connect!
-                  </p>
-               </div>
-
                <div className="underPic">
 
                     <p>London, ON | Cambridge, ON</p>
@@ -248,6 +235,21 @@ export default function About(){
                </div>
 
                <div className="experience">
+
+                   <h2 className="aboutH2">// About Me</h2>
+
+                    <p className="aboutDescription">
+                        I’m currently finishing my final semester of Computer Science at Western and will be seeking full-time opportunities starting Spring 2026. I’ve been interested in software development since high school, drawn to the problem-solving and creativity that come with building reliable, well-designed systems.
+                    </p>
+
+                    <p className="aboutDescription">
+                    I’ve always been a gamer, which led me to pursue a minor in Game Development. Through this, I’ve gained hands-on experience with the full game development process and had the opportunity to work on several of my own projects. Alongside this, my internship experience at camera manufacturer IOI helped me discover an interest in low-level programming and working close to hardware.
+                    </p>
+                    
+                    <p className="aboutDescription">
+                        Outside of tech, I enjoy playing and watching basketball (go Celtics!) and football (go Patriots!), and spending time with a guitar, playing along to bands like Oasis, Radiohead, and Nirvana. Feel free to check out my work or use the links to the left to connect!
+                    </p>
+
                    <h2 className="aboutH2">// Education</h2>
 
                    <h3 className="aboutH3">

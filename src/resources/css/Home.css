@@ -6,11 +6,11 @@ body, html {
 
 * {
     background: radial-gradient(
-    circle at 50% 80%, 
+    circle at 50% 20%, 
     #012340 20%,  
     #051726 90%       
   );
-  background-size: 100% 200%;
+  background-size: 100% 700%;
 }
 
 * > * {
@@ -223,6 +223,6 @@ body, html {
 }
 
 .bodyPic {
-  width: 125%;
+  width: 100%;
   height: auto;
 }

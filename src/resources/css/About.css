@@ -89,6 +89,7 @@
 .underPic p{
     margin: 0;
     padding-top:10px;
+    white-space: nowrap;
 }
 
 .linkButt{
@@ -97,13 +98,6 @@
     border:none;
     cursor: pointer;
 
-}
-
-
-/* Brief */
-.brief{
-    grid-column: span 13 / 20;
-    grid-row: span 5 / 7;   
 }
 
 .aboutH2{
@@ -116,7 +110,7 @@
 
 .aboutDescription{
     color: white;
-    font-size: 16px;
+    font-size: clamp(0.75rem, 0.75cqw, 1rem);
     line-height: 1.5;
 }
 
@@ -217,9 +211,8 @@
 
 /* Experience Div*/
 .experience{
-
     grid-column: span 14 / 21;
-    grid-row: span 10 / 19;
+    grid-row: span 17 / 19;
     padding-left: 20px;
 }
 
