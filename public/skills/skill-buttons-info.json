@@ -1,0 +1,86 @@
+[
+    {
+        "skill": "C++",
+        "description": "A powerful, high-perfomance language mostly used for object-oriented programming, system/software design, video games and complex applications.",
+        "bullets":["Experience writing effective C++ code using good O.O.P. principles in an organized manner",
+                   "Used libraries and frameworks such as: Boost, Nvidia's Cuda, OpenCV, Qt, OpenGl, AvCodec and GTK",
+                   "Developed applications in C++ with practical applications while working at IO Industries"]
+    },
+    {
+        "skill": "Java",
+        "description": "A versatile, object oriented programming language used for developing cross platform applications, including web, mobile and enterprise systems.",
+        "bullets":["Comfortable developing and building Java applications" ,
+                   "Used Java to build a mapping system of Western University application that incorporated Java libraries such as JSON, Java Swing and JUnit",
+                   "Utilized Java to build computer networking tools such as a WebScraper and different alogorithmns involving peer-to-peer connections.",
+                   "Developed custom data structures for a Data Structures and Algorithmns course"]
+    },
+    {
+        "skill": "Python",
+        "description": "A high level, easy to learn, scripting language that is very versatile. Although simple, python has many libraries that help a developer create very powerful applications with ease.",
+        "bullets":["Utilized Python for writing scripts to automate tasks / maintain code",
+                   "Built multiple applications using the socket library to create chatrooms and client/server based games over TCP and UDP connection protocols for a Computer Networks course",
+                   "Libraries I'm experienced in include: 'scikit-learn', 'pyTorch', 'Numpy', 'Pygame', 'threading', 'rsa' (encryption) and 'socket'",
+                   "Utilized Python to build machine learning models and projects"]
+    },
+    {
+        "skill": "Qt",
+        "description": "A cross-platform, open-source framework used for developing graphical user interfaces and applications.",
+        "bullets":["Familar with developing Qt applications in Linux and Windows", 
+                   "Used Qt to design the GUI of a SmartHome project for an O.O.P. course", 
+                   "Developed GUIs with Qt while working at IO Industries",
+                   "Compiled/built Qt libraries from source" ]
+    },
+    {
+        "skill": "Linux",
+        "description": "An open-source Unix-like operating system that is developer friendly. It's command line interpreter 'Bash' is a powerful scripting language that puts lots of power in the developer's hands.",
+        "bullets":["Comfortable developing developing applications in a Linux environment with distros such as Ubuntu and OpenSUSE", 
+                   "Ability to use Bash to write effective and useful scripts for automating tasks", 
+                   "Experience building applications and installers for practical Linux software using packages such as RPM and Debian"]
+    },
+    {
+        "skill": "Unity",
+        "description": "A powerful cross-platform game engine used to create 2D, 3D and VR games. Unity uses C# as it's main programming language and has a large asset store for developers to use.",
+        "bullets":["Experience building 2D, 3D and VR games in C# using the Unity engine",
+                   "Designed and developed custom Unity editor tools to streamline content creation and reduce manual setup",
+                   "Built real-time combat mechanics, including abilities, cooldowns, and enemy interactions",
+                   "Created responsive in-game UI using Unity UI (Canvas, TextMeshPro, event systems)"]
+    },
+    {
+        "skill": "C",
+        "description": "A low level, procedural programming language, known for being efficent and it's use in system design.",
+        "bullets":["Comfortable writing and debugging code written in C" ,
+                   "Developed low-level C programs using system functions for an Operating Systems course"]
+    },
+    {
+        "skill": "React",
+        "description": "A Javascript library developed by Meta for building fast user interfaces. React is mainly used to create webpages and single page applications using JSX which helps developers write HTML-like webpages.",
+        "bullets":["Used React/JSX to build a redesigned and user-experience oriented Github for a Human-Computer interation course", 
+                   "React was used to build this portfolio website!"]
+    },
+    {
+        "skill": "Boost",
+        "description": "The Boost C++ Libraries are a large collection of libraries that extend the standard C++ libraries. Boost has libraries for socket programming, data structures, math and more.",
+        "bullets":["Experience using Boost libraries in C++ development process in work and school", 
+                   "Most familiar with filesystem, Asio and Python (used for python wrapping libraries) libraries",
+                   "Used Boost.Build and Jam to build cross-platform applications"]
+    },
+    {
+        "skill": "SVN/Git",
+        "description": "SVN is a version control system used to manage files and directories for software developers.",
+        "bullets":["Used SVN to manage version control while working at IO Industries", 
+                   "Also familar with Git and it's command line tools", 
+                   "Used Git to manage and organize muliple personal projects and repositories"]
+    },
+    {
+        "skill": "FFmpeg",
+        "description": "FFmpeg (and its avcodec libraries) are a collection of libraries and tools used for encoding, decoding and altering video, audio and other multimedia files.",
+        "bullets":["Used the Avcodec libraries to build an applicaton for creating MP4 video from image files" ,
+                   "Experience using the FFmpeg.exe tool for manipulating different video/photo formats including DNG, PNG, JPG and TIFF"]
+    },
+    {
+        "skill": "NVIDIA Cuda",
+        "description": "NVIDIA CUDA is a parallel computing platform and programming model developed by NVIDIA for general-purpose computing on GPUs.",
+        "bullets":["Experience writing Cuda kernels for parallel processing tasks", 
+                   "Familiar with CUDA libraries and runtime APIs"]
+    }
+]

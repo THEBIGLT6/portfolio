@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../resources/css/Projects.css"
 
-
 import Boost from "../resources/icons/Boost.png";
 import C from "../resources/icons/c.png";
 import Cpp from "../resources/icons/cpp.png";
@@ -14,7 +13,6 @@ import Qt from "../resources/icons/qt.svg";
 import ReactImg from "../resources/icons/react.png";
 import CSharp from "../resources/icons/csharp.png";
 import Unity from "../resources/icons/unity.png";
-
 
 // Project Tags
 const tagImages = {
@@ -54,7 +52,7 @@ function CardGrid() {
       fetch(`${process.env.PUBLIC_URL}/projects/project-info.json`)
           .then((response) => response.json())
           .then((data) => setCardData(data))
-          .catch((error) => console.error("Error loading JSON data:", error));
+          .catch((error) => console.error("Error loading project JSON data:", error));
   }, []);
 
     const [popup, setPopup] = useState({ show: false, title: "", tags: [], description: "", useLink: false, link: "", sourceCode: "", video: "", date: "" });
@@ -171,7 +169,7 @@ function ProjectPopup({ title, tags, video, description, useLink, link, sourceCo
             <button className="closeBtn" onClick={onClose}>Close</button>
         </div>
     </div>
-);
+  );
 }
 
 

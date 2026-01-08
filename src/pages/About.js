@@ -1,4 +1,6 @@
+import React, { useState, useEffect } from "react";
 import "../resources/css/About.css"
+
 import headshot from '../resources/Pictures/headshot.png';
 import GitHub from "../resources/icons/GitHub.png";
 import LinkedIn from "../resources/icons/LinkedIn.png";
@@ -14,6 +16,7 @@ import Linux from "../resources/icons/linux.png";
 import ReactPic from "../resources/icons/react.png";
 import Svn from  "../resources/icons/svn.png"
 import Unity from "../resources/icons/unity.png";
+import Cuda from "../resources/icons/cuda.png";
 
 import AI from '../resources/icons/AI.png';
 import basketball from "../resources/icons/basketball.png";
@@ -22,60 +25,22 @@ import fullStack from "../resources/icons/fullStack.png";
 import gaming from "../resources/icons/gaming.png";
 import gameDev from "../resources/icons/gameDev.png";
 import music from "../resources/icons/music.png";
-import raspberryPi from "../resources/icons/raspberryPi.png";
 import trivia from "../resources/icons/trivia.png";
 
-import React, { useState } from "react";
-
-//Skill descriptions
-const cppDescription = "A powerful, high-perfomance language mostly used for object-oriented programming, system/software design, video games and complex applications.";
-const javaDescription = "A versatile, object oriented programming language used for developing cross platform applications, including web, mobile and enterprise systems.";
-const pythonDescription = "A high level, easy to learn, scripting language that is very versatile. Although simple, python has many libraries that help a developer create very powerful applications with ease.";
-const cDescription = "A low level, procedural programming language, known for being efficent and it's use in system design.";
-const ffmpegDescription = "FFmpeg (and its avcodec libraries) are a collection of libraries and tools used for encoding, decoding and altering video, audio and other multimedia files.";
-const boostDescription = "The Boost C++ Libraries are a large collection of libraries that extend the standard C++ libraries. Boost has libraries for socket programming, data structures, math and more.  ";
-const linuxDescription = "An open-source Unix-like operating system that is developer friendly. It's command line interpreter 'Bash' is a powerful scripting language that puts lots of power in the developer's hands.";
-const svnDescription = "SVN is a version control system used to manage files and directories for software developers. ";
-const qtDescription = "A cross-platform, open-source framework used for developing graphical user interfaces and applications. ";
-const reactDescription = "A Javascript library developed by Meta for building fast user interfaces. React is mainly used to create webpages and single page applications using JSX which helps developers write HTML-like webpages.";
-const UnityDescription = "A powerful cross-platform game engine used to create 2D, 3D and VR games. Unity uses C# as it's main programming language and has a large asset store for developers to use.";
-
-
-// Bullet Point lists for skills 
-const cppBullet = ["Experience writing effective C++ code using good O.O.P. principles in an organized manner", 
-                   "Used libraries and frameworks such as: Boost, OpenCV, Qt, OpenGl, AvCodec and GTK",  
-                   "Developed applications in C++ with practical applications while working at IO Industries"];
-const javaBullet = ["Comfortable developing and building Java applications", 
-                    "Used Java to build a mapping system of Western University application that incorporated Java libraries such as JSON, Java Swing and JUnit", 
-                    "Utilized Java to build computer networking tools such as a WebScraper and different alogorithmns involving peer-to-peer connections.",
-                    "Developed custom data structures for a Data Structures and Algorithmns course"];
-const pythonBullet = ["Utilized Python for writing scripts to automate tasks / maintain code", 
-                      "Built multiple applications using the socket library to create chatrooms and client/server based games over TCP and UDP connection protocols for a Computer Networks course",
-                      "Libraries I'm experienced in include: 'scikit-learn', 'pyTorch', 'Numpy', 'Pygame', 'threading', 'rsa' (encryption) and 'socket'", 
-                      "Utilized Python to build machine learning models and projects"];
-const cBullet = ["Comfortable writing and debugging code written in C", 
-                 "Developed low-level C programs using system functions for an Operating Systems course"];
-const ffmpegBullet = ["Used the Avcodec libraries to build an applicaton for creating MP4 video from image files.", 
-                      "Experience using the FFmpeg.exe tool for manipulating different video/photo formats including DNG, PNG, JPG and TIFF"];
-const boostBullet = ["Experience using Boost libraries in C++ development process in work and school", 
-                     "Most familiar with filesystem, Asio and Python (used for wrapping libraries) libraries",
-                     "Used Boost.Build and Jam to build cross-platform applications"];
-const linuxBullet = ["Comfortable and experienced when developing applications in Linux", 
-                     "Ability to use Bash to write effective and useful scripts for automating tasks", 
-                     "Experience building applications and installers for practical Linux software."];
-const svnBullet = ["Used SVN to manage version control while working at IO Industries", 
-                   "Also familar with Git and it's command line tools", 
-                   "Used SVN/Git to manage and organize muliple projects and repositories"];
-const qtBullet = ["Familar with developing Qt applications in Linux and Windows", 
-                  "Used Qt to design the GUI of a SmartHome project for an O.O.P. course", 
-                  "Developed GUIs with Qt while working at IO Industries",
-                  "Compiled/built Qt libraries from source" ];
-const reactBullet = ["Used React/JSX to build a redesigned and user-experience oriented Github for a Human-Computer interation course", 
-                     "React was used to build this portfolio website!"];
-const UnityBullet = ["Experience building 2D, 3D and VR games in C# using the Unity engine",
-                     "Designed and developed custom Unity editor tools to streamline content creation and reduce manual setup",
-                     "Built real-time combat mechanics, including abilities, cooldowns, and enemy interactions",
-                     "Created responsive in-game UI using Unity UI (Canvas, TextMeshPro, event systems)"];
+const imageTags = {
+    "C++": Cpp,
+    "Python": Python,
+    "Java": Java,
+    "Qt": Qt,
+    "Boost": Boost,
+    "C": C,
+    "FFmpeg": FFmpeg,
+    "Linux": Linux,
+    "React": ReactPic,
+    "SVN/Git": Svn,
+    "Unity": Unity,
+    "NVIDIA Cuda": Cuda
+};
 
 // Popup dialog on SkillButton being clicked
 function Popup({ title, description, bulletList, onClose }) {
@@ -120,6 +85,18 @@ function SkillButton({img, description, bulletList, title}){
     );
 }
 
+function CreateSkillButtons(){
+    const [skills, setSkills] = useState([]);
+
+    useEffect(() => {
+        fetch(`${process.env.PUBLIC_URL}/skills/skill-buttons-info.json`)
+        .then(res => res.json())
+        .then(setSkills)
+        .catch((error) => console.error("Error loading skill buttons JSON data:", error));
+    }, []);
+
+    return skills.map( skill => ( <SkillButton key={skill.skill} img={imageTags[skill.skill]} title={skill.skill} bulletList={skill.bullets} description={skill.description}/>  ) );
+}
 
 function SoftSkillLabel( { skill, percentage } ){
 
@@ -196,17 +173,7 @@ export default function About(){
                   
                   <h2 className="aboutH2">// Technical Skills</h2>
                   
-                  <SkillButton img={Cpp} title="C++" bulletList={cppBullet} description={cppDescription} />
-                  <SkillButton img={Java} title="Java" bulletList={javaBullet} description={javaDescription}/>
-                  <SkillButton img={Python} title="Python" bulletList={pythonBullet} description={pythonDescription}/>
-                  <SkillButton img={Qt} title="Qt" bulletList={qtBullet} description={qtDescription}/>
-                  <SkillButton img={Linux} title="Linux" bulletList={linuxBullet} description={linuxDescription}/>
-                  <SkillButton img={Unity} title="Unity" bulletList={UnityBullet} description={UnityDescription}/>
-                  <SkillButton img={C} title="C" bulletList={cBullet} description={cDescription}/>
-                  <SkillButton img={ReactPic} title="React" bulletList={reactBullet} description={reactDescription}/>
-                  <SkillButton img={Svn} title="Svn/Git" bulletList={svnBullet} description={svnDescription}/>
-                  <SkillButton img={Boost} title="Boost Libraries" bulletList={boostBullet} description={boostDescription}/>
-                  <SkillButton img={FFmpeg} title="FFmpeg" bulletList={ffmpegBullet} description={ffmpegDescription}/>
+                  <CreateSkillButtons />
 
                   <h2 className="aboutH2">// Soft Skills</h2>
                   <SoftSkillLabel skill={"Problem Solving"} percentage={100}/>
@@ -229,9 +196,6 @@ export default function About(){
                         <InterestLabel label="Music" img={music}/>
                         <InterestLabel label="Trivia" img={trivia}/>
                     </div>
-
-
-
                </div>
 
                <div className="experience">
@@ -306,10 +270,7 @@ export default function About(){
                         <li>Obtained City of Hamilton Food Safety and Ontario Smart Serve certificates</li>
                     </ul>
 
-                   
-               
                </div>
-
 
            </div>
         

@@ -69,7 +69,7 @@ export default function Home(){
               <h6 className="homeH6">
                 I am a skilled student software developer currently pursing an honours specialization in computer science 
                 with a minor in game development at Western. I have a passion for problem solving and enjoy a good challenge.
-                I am well diversed with experience in many languages and libraries: C/C++, Qt, Boost, Python, OpenGl and Java 
+                I am well diversed with experience in many languages and libraries: C/C++/C#, Qt, Boost, Python, Unity, Java and JavaScript 
                 to name a few. Feel free to checkout any of the projects I have contributed to on the projects page!  
 
               </h6>
