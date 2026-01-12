@@ -44,7 +44,7 @@ export default function Home(){
             </button>
           </a>
 
-          <a href="https://www.linkedin.com/in/liam-truss-a42a65142" target="_blank" rel="noopener noreferrer">
+          <a href="www.linkedin.com/in/liam-truss" target="_blank" rel="noopener noreferrer">
             <button className="LinkedInButt">
               <img src={LinkedIn} alt="Icon" className="icon-image" />
             </button>

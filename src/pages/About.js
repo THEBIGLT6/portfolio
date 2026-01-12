@@ -154,7 +154,7 @@ export default function About(){
                             </button>
                         </a>
 
-                        <a href="https://www.linkedin.com/in/liam-truss-a42a65142" target="_blank" rel="noopener noreferrer">
+                        <a href="www.linkedin.com/in/liam-truss" target="_blank" rel="noopener noreferrer">
                             <button className="linkButt">
                                 <img src={LinkedIn} alt="Icon" className="icon-image" />
                             </button>
