@@ -1,4 +1,4 @@
-import { Link, resolvePath, useMatch, useResolvedPath, useLocation } from "react-router-dom"
+import { Link, useMatch, useResolvedPath, useLocation } from "react-router-dom"
 import "./resources/css/MenuBar.css"
 
 export default function MenuBar(){

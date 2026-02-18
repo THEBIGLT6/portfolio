@@ -179,7 +179,7 @@ export default function Projects(){
     return( 
         
         <div className="pageContainer">
-            <h1 className="projectHeader">// Projects</h1>
+            <h1 className="projectHeader">{'// Projects'}</h1>
             
             <div className="projectPreface">
                 The following is a collection of projects / assignments I have worked on over the years. Click on a project to read more about it. 

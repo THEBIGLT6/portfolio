@@ -171,11 +171,11 @@ export default function About(){
 
                <div className="skills">
                   
-                  <h2 className="aboutH2">// Technical Skills</h2>
+                  <h2 className="aboutH2">{'// Technical Skills'}</h2>
                   
                   <CreateSkillButtons />
 
-                  <h2 className="aboutH2">// Soft Skills</h2>
+                  <h2 className="aboutH2">{'// Soft Skills'}</h2>
                   <SoftSkillLabel skill={"Problem Solving"} percentage={100}/>
                   <SoftSkillLabel skill={"Initiative"} percentage={100}/>
                   <SoftSkillLabel skill={"Reliable"} percentage={100}/>
@@ -185,7 +185,7 @@ export default function About(){
                   <SoftSkillLabel skill={"Organization"} percentage={92}/>
                   <SoftSkillLabel skill={"Communication / Customer Service"} percentage={85}/>
 
-                  <h2 className="aboutH2">// Interests & Hobbies</h2>
+                  <h2 className="aboutH2">{'// Interests & Hobbies'}</h2>
                     <div className="interestsWrapper">
                         <InterestLabel label="Gaming" img={gaming}/>
                         <InterestLabel label="Artifical Intelligence" img={AI}/>
@@ -200,7 +200,7 @@ export default function About(){
 
                <div className="experience">
 
-                   <h2 className="aboutH2">// About Me</h2>
+                   <h2 className="aboutH2">{'// About Me'}</h2>
 
                     <p className="aboutDescription">
                         I’m currently finishing my final semester of Computer Science at Western and will be seeking full-time opportunities starting Spring 2026. I’ve been interested in software development since high school, drawn to the problem-solving and creativity that come with building reliable, well-designed systems.
@@ -214,7 +214,7 @@ export default function About(){
                         Outside of tech, I enjoy playing and watching basketball (go Celtics!) and football (go Patriots!), and spending time with a guitar, playing along to bands like Oasis, Radiohead, and Nirvana. Feel free to check out my work or use the links to the left to connect!
                     </p>
 
-                   <h2 className="aboutH2">// Education</h2>
+                   <h2 className="aboutH2">{'// Education'}</h2>
 
                    <h3 className="aboutH3">
                    <u>Western University - BSc. Honours Specialization in Computer Science</u> <br />
@@ -227,7 +227,7 @@ export default function About(){
                       <li>Relevant courses: Computer Networks, Game Programming and Design, System Programming, Object-Oriented Design and Analysis, Internet Algorithmics, Machine Learning / AI and more.  </li>
                     </ul>
 
-                   <h2 className="aboutH2">// Work Experience</h2>
+                   <h2 className="aboutH2">{'// Work Experience'}</h2>
                    
                    <h3 className="aboutH3">
                    <u>IO Industries - Intern Software Developer</u> <br />
